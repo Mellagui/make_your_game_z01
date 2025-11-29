@@ -47,7 +47,6 @@ export class GameBoard {
                     if (y == 0) cell.classList.add("top");
                     if (y == this.rows - 1) cell.classList.add("bottom");
 
-                    // Check neighbors to decide which borders to draw
                     if (!this.isWall(x, y - 1)) cell.classList.add("top");
                     if (!this.isWall(x, y + 1)) cell.classList.add("bottom");
                     if (!this.isWall(x - 1, y)) cell.classList.add("left");

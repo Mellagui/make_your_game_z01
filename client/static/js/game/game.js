@@ -1,3 +1,4 @@
+import { Controller } from "../controller/controller.js";
 import { GameBoard } from "../view/board/gameBoard.js"
 
 export class Game {
@@ -9,8 +10,8 @@ export class Game {
 
         this.ui = null;
         this.gameBoard = new GameBoard(this);
-        this.controller = null;
-        
+        this.controller = new Controller(this);
+
         this.player = null;
         this.ghosts = null;
         
@@ -48,7 +49,6 @@ export class Game {
         this.deltaTime = (timestamp - this.lastTime) / 1000;
         this.lastTime = timestamp;
 
-        // Limit delta time to prevent large jumps
         if (this.deltaTime > 0.1) this.deltaTime = 0.1;
 
         this.timeRemaining -= this.deltaTime;

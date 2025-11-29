@@ -111,19 +111,19 @@ body {
 }
 
 .wall.top    { 
-    border-top:    2px solid #00f;
+    border-top:    3px solid #00f;
     filter: drop-shadow(0 0 6px rgb(61, 87, 255));
 }
 .wall.bottom { 
-    border-bottom: 2px solid #00f;
+    border-bottom: 3px solid #00f;
     filter: drop-shadow(0 0 6px rgb(61, 87, 255));
 }
 .wall.left   { 
-    border-left:   2px solid #00f;
+    border-left:   3px solid #00f;
     filter: drop-shadow(0 0 6px rgb(61, 87, 255));
 }
 .wall.right  { 
-    border-right:  2px solid #00f;
+    border-right:  3px solid #00f;
     filter: drop-shadow(0 0 6px rgb(61, 87, 255));
 }
 
