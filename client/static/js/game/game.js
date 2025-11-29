@@ -1,3 +1,5 @@
+import { GameBoard } from "../view/board/gameBoard.js"
+
 export class Game {
     constructor() {
         this.lastTime = 0;
@@ -5,12 +7,25 @@ export class Game {
         this.timeRemaining = 180;
         this.currentTimePerSeconde = null;
 
-        // In Game constructor
+        this.ui = null;
+        this.gameBoard = new GameBoard(this);
+        this.controller = null;
+        
+        this.player = null;
+        this.ghosts = null;
+        
+        this.score = 0;
+        this.maxScore = 0;
+        this.lives = 5;
+
+        this.animationFrameId = null;
         this.gameLoop = this.gameLoop.bind(this);
     }
 
     init() {
         console.log('Initializing game...');
+
+        this.gameBoard.createBoard();
 
         this.startGameLoop();
 
@@ -43,6 +58,5 @@ export class Game {
         };
 
         this.animationFrameId = requestAnimationFrame((timestamp) => this.gameLoop(timestamp));
-        
     }
 }
