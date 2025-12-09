@@ -1,34 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #111;
-    color: #FFEE58;
-} */
 body {
     margin: 0;
     padding: 0;
     background-color: #000;
-    color: #FFEE58;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
 
-    /* 🎯 Pac-Man grid background */
+    /* Pac-Man grid background */
     background-image:
         radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 0%, #000000 80%),
         linear-gradient(#ffffff 2px, transparent 2px),
         linear-gradient(90deg, #ffffff 2px, transparent 2px);
-    
-    background-size: 
-        100% 100%,  /* radial fade */
-        20px 20px,   /* horizontal grid */
-        20px 20px;   /* vertical grid */
+
+    background-size:
+        100% 100%,
+        /* radial fade */
+        20px 20px,
+        /* horizontal grid */
+        20px 20px;
+    /* vertical grid */
 
     background-position: center center;
 
@@ -47,6 +44,7 @@ body {
     background: radial-gradient(circle at center, #111 0%, #000 100%);
     z-index: 1;
 }
+
 .game-container {
     background: transparent;
 }
@@ -71,78 +69,14 @@ body {
 .title-game img {
     width: 100%;
     height: 6rem;
-    filter: drop-shadow(0 0 5px rgba(255, 238, 88, 0.6));
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
 }
 
-.subject-header, .subject-footer {
+.subject-header,
+.subject-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 0.5rem;
 }
-
-.subject-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 6px 0;
-}
-
-.game-board {
-    display: grid;
-    width: auto;
-    height: auto;
-    position: relative;
-    grid-template-columns: repeat(21, auto);
-    grid-template-rows: repeat(21, auto);
-}
-
-.cell {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wall {
-    background: transparent;
-}
-
-.wall.top    { 
-    border-top:    3px solid #00f;
-    filter: drop-shadow(0 0 6px rgb(61, 87, 255));
-}
-.wall.bottom { 
-    border-bottom: 3px solid #00f;
-    filter: drop-shadow(0 0 6px rgb(61, 87, 255));
-}
-.wall.left   { 
-    border-left:   3px solid #00f;
-    filter: drop-shadow(0 0 6px rgb(61, 87, 255));
-}
-.wall.right  { 
-    border-right:  3px solid #00f;
-    filter: drop-shadow(0 0 6px rgb(61, 87, 255));
-}
-
-.dot {
-    margin-top: 9px;
-    margin-left: 9px;
-    border-radius: 50%;
-    width: 4px;
-    height: 4px;
-    background-color: #FFEE58;
-}
-
-@media (max-width: 480px) {
-    .subject {
-        width: 95vw;
-        height: 95vh;
-    }
-    
-    .game-board {
-        transform: scale(0.9);
-    }
-} 
